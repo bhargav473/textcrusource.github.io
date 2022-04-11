@@ -1,0 +1,250 @@
+.menu-li li {
+  margin-left: 12px; }
+
+.main-logo {
+  max-width: 136px; }
+
+.main-img img {
+  width: 100%;
+  margin-top: 70px; }
+
+.tag-line {
+  margin-top: 20%; }
+  .tag-line h2 {
+    line-height: inherit; }
+  .tag-line h6 {
+    color: rgba(0, 0, 0, 0.55); }
+
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  /*  margin: 5px;*/ }
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s; }
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s; }
+
+.button:hover span {
+  padding-right: 25px; }
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0; }
+
+.aa {
+  border: 1px solid red;
+  text-align: center; }
+
+.pricingTable {
+  text-align: center;
+  background: #fff;
+  margin: 0 -15px;
+  box-shadow: 0 0 10px #ababab;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  color: #cad0de;
+  transform: scale(1);
+  transition: all 0.5s ease 0s; }
+
+.pricingTable:hover {
+  transform: scale(1.05);
+  z-index: 1; }
+
+.pricingTable .pricingTable-header {
+  padding: 40px 0;
+  background: #f5f6f9;
+  border-radius: 10px 10px 50% 50%;
+  transition: all 0.5s ease 0s; }
+
+.pricingTable:hover .pricingTable-header {
+  background: #ff9624; }
+
+.pricingTable .pricingTable-header i {
+  font-size: 50px;
+  color: #858c9a;
+  margin-bottom: 10px;
+  transition: all 0.5s ease 0s; }
+
+.pricingTable .price-value {
+  font-size: 35px;
+  color: #ff9624;
+  transition: all 0.5s ease 0s; }
+
+.pricingTable .month {
+  display: block;
+  font-size: 14px;
+  color: #cad0de; }
+
+.pricingTable:hover .month,
+.pricingTable:hover .price-value,
+.pricingTable:hover .pricingTable-header i {
+  color: #fff; }
+
+.pricingTable .heading {
+  font-size: 24px;
+  color: #ff9624;
+  margin-bottom: 20px;
+  text-transform: uppercase; }
+
+.pricingTable .pricing-content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px; }
+
+.pricingTable .pricing-content ul li {
+  line-height: 30px;
+  color: #a7a8aa; }
+
+.pricingTable .pricingTable-signup a {
+  display: inline-block;
+  font-size: 15px;
+  color: #fff;
+  padding: 10px 35px;
+  border-radius: 20px;
+  background: #ffa442;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s; }
+
+.pricingTable .pricingTable-signup a:hover {
+  box-shadow: 0 0 10px #ffa442; }
+
+.pricingTable.blue .heading,
+.pricingTable.blue .price-value {
+  color: #4b64ff; }
+
+.pricingTable.blue .pricingTable-signup a,
+.pricingTable.blue:hover .pricingTable-header {
+  background: #4b64ff; }
+
+.pricingTable.blue .pricingTable-signup a:hover {
+  box-shadow: 0 0 10px #4b64ff; }
+
+.pricingTable.red .heading,
+.pricingTable.red .price-value {
+  color: #ff4b4b; }
+
+.pricingTable.red .pricingTable-signup a,
+.pricingTable.red:hover .pricingTable-header {
+  background: #ff4b4b; }
+
+.pricingTable.red .pricingTable-signup a:hover {
+  box-shadow: 0 0 10px #ff4b4b; }
+
+.pricingTable.gry .heading,
+.pricingTable.gry .price-value {
+  color: #bdc3c7; }
+
+.pricingTable.gry .pricingTable-signup a,
+.pricingTable.gry:hover .pricingTable-header {
+  background: #bdc3c7; }
+
+.pricingTable.gry .pricingTable-signup a:hover {
+  box-shadow: 0 0 10px #bdc3c7; }
+
+.pricingTable.vank .heading,
+.pricingTable.vank .price-value {
+  color: #9b59b6; }
+
+.pricingTable.vank .pricingTable-signup a,
+.pricingTable.vank:hover .pricingTable-header {
+  background: #9b59b6; }
+
+.pricingTable.red .pricingTable-signup a:hover {
+  box-shadow: 0 0 10px #9b59b6; }
+
+.pricingTable.green .heading,
+.pricingTable.green .price-value {
+  color: #40c952; }
+
+.pricingTable.green .pricingTable-signup a,
+.pricingTable.green:hover .pricingTable-header {
+  background: #40c952; }
+
+.pricingTable.green .pricingTable-signup a:hover {
+  box-shadow: 0 0 10px #40c952; }
+
+.pricingTable.blue:hover .price-value,
+.pricingTable.green:hover .price-value,
+.pricingTable.red:hover .price-value,
+.pricingTable.vank:hover .price-value,
+.pricingTable.gry:hover .price-value {
+  color: #fff; }
+
+@media screen and (max-width: 990px) {
+  .pricingTable {
+    margin: 0 0 20px; } }
+.s-p a {
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 600; }
+
+.bg-footer {
+  background: #222;
+  color: #888888; }
+  .bg-footer h3, .bg-footer h4 {
+    color: whitesmoke; }
+  .bg-footer h4 {
+    margin-bottom: 18px; }
+  .bg-footer p {
+    font-size: 14px; }
+
+.serivices p {
+  line-height: 10px; }
+
+.arrow {
+  border: solid #888888;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  margin-right: 6px;
+  padding: 3px; }
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg); }
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg); }
+
+.d-a {
+  margin-bottom: 2px;
+  margin-left: 5px; }
+
+.social-network .s {
+  display: inline-block;
+  margin-left: 8px;
+  width: 30px;
+  height: 30px;
+  background: #888888;
+  border: 1px solid #888888;
+  border-radius: 20px;
+  text-align: center; }
+.social-network .s img {
+  width: 65%;
+  max-width: 100%; }
+
+.pricingTable-signup a {
+  text-decoration: none; }
+
+.clients img {
+  width: 100%;
+  max-width: 100%; }
+
+/*# sourceMappingURL=style.css.map */
