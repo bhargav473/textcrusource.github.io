@@ -7669,6 +7669,7 @@ footer.demo .copyright {
     text-transform: capitalize;
 }
 
+
 .navbar.navbar-transparent.demo .attr-nav > ul > li.button {
     display: none;
 }
@@ -7685,4 +7686,9 @@ footer.demo .copyright {
 }
 .mc-t{
   margin-top: 20px;
+}
+
+.nav-border{
+  border-left:0px!important;
+  border-bottom:0px!important;
 }
