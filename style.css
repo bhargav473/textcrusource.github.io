@@ -7728,6 +7728,7 @@ background-image: url("https://lh5.googleusercontent.com/-kkxEx-SkRaY/VBLF4BV2lZ
   width: 400px;
   height: 400px;
   margin: 3em auto;
+  opacity: 0.6;
 
   /* [3] Prepare the animation effects */
   transition: transform 200ms linear;
