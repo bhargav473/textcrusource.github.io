@@ -7705,6 +7705,14 @@ canvas {
   width:98vmin;
   height:98vmin;
 }
+.glass-nav{
+   background: #82bc0000 !important;
+   color:white!important;
+}
+
+.glass-nav,span,h3,h4,a{
+color: white!important
+}
 
 
 
@@ -7779,9 +7787,4 @@ background-image: url("https://lh5.googleusercontent.com/-kkxEx-SkRaY/VBLF4BV2lZ
 }
 
 
-
-
-/*
-.......................
-*/
 
