@@ -2,6 +2,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;800&amp;display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito&amp;display=swap");
+/*@import url("https://fonts.googleapis.com/css?family=Poppins");*/
+
+
 * {
   padding: 0;
   margin: 0;
@@ -13,6 +16,10 @@ html {
   position: relative;
   overflow: visible;
 }
+/*body {
+    font-family: Poppins!important;
+}
+*/
 
 body {
   font-family: "Nunito", sans-serif;
@@ -7713,8 +7720,6 @@ canvas {
 .glass-nav span,h3,h4 {
 color: white!important
 }
-
-
 
 
 
