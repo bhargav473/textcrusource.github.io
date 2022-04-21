@@ -7732,6 +7732,34 @@ color: white!important
 */
 
 
+.t-m ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.t-m ul li {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.pointer a {
+  text-decoration: none;
+  /*color: white!important;*/
+}
+
+.t-m ul li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+
 
 @media only screen and (max-width: 810px) {
    .t-margin{
