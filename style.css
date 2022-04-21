@@ -7731,6 +7731,26 @@ color: white!important
 }
 */
 
+
+
+@media only screen and (max-width: 810px) {
+   .t-margin{
+    margin-top: 10%
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .pointer {cursor: pointer;}
 
 
