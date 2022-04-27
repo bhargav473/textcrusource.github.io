@@ -394,6 +394,53 @@
             });
         });
 
+        /* ==================================================
+            FAB BUTTON
+        ================================================== */
+        $('.fab-button').click(function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            })
+            // $('html, body').animate({scrollTop:0},'50');
+        })
+
+        let isFabShown = false;
+        $(window).scroll(function() {
+            if(window.scrollY > 300) {
+                if(!isFabShown)
+                    {
+                        $('.fab-button').fadeIn(200);
+                        isFabShown = true;
+                    }
+            } else {
+                if(isFabShown)
+                    {
+                        $('.fab-button').fadeOut(200);
+                        isFabShown = false;
+                    }
+            }
+        });
+
+
+        // document.querySelector('body').addEventListener('hidden.bs.modal', (event) => {
+        //     // remove the overflow: hidden and padding-right: 15px
+        //     document.querySelector('body').removeAttribute('style');
+        // });
+
+        $('#myModal').on('shown.bs.modal', function () {
+            
+            $('body').removeClass('modal-open');
+            // setTimeout(function(){
+            //     $(document).removeClass('modal-open');
+            // }, 100)
+          
+        }).on('hidden.bs.modal', function() {
+          
+            $(document).off('scroll.noScroll');
+          
+        });
+
     }); // end document ready function
 })(jQuery); // End jQuery
 

@@ -24,6 +24,7 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
+ /* font-size: 16px;*/
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
@@ -66,7 +67,8 @@ h1 {
 }
 
 h2 {
-  font-size: 36px;
+  /*font-size: 36px;*/
+  font-size: 40px;
 }
 
 h3 {
@@ -2364,9 +2366,9 @@ body,
 /* Appoinment Form */
 .banner-area .appoinment-box {
   padding: 50px;
-  background: #ffffff;
+/*  background: #ffffff;
   border-radius: 5px;
-  box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
+  box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);*/
   position: relative;
   z-index: 1;
 }
@@ -2377,7 +2379,7 @@ body,
   top: -100px;
   height: 400px !important;
   width: 400px;
-  background: url(assets/img/shape/1-light.png);
+/*  background: url(assets/img/shape/1-light.png);*/
   content: "";
   background-repeat: no-repeat;
   background-position: right top;
@@ -7321,7 +7323,8 @@ footer .footer-bottom p a {
 }
 
 .illustration-services-area .single-item .item img {
-  height: 200px;
+ /* height: 200px;*/
+ height: 120px;
   margin: auto 0 30px;
 }
 
@@ -7730,20 +7733,199 @@ canvas {
 color: white!important
 }
 */
-
-
-.t-m ul {
-  list-style: none;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+/*1st table*/
+.demo10{background:#FBFBFB;padding:30px 0;    border-radius: 10px;}
+.pricingTable10{text-align:center}
+.pricingTable10 .pricingTable-header{padding:30px 0;background:#4d4d4d;position:relative;transition:all .3s ease 0s}
+.pricingTable10:hover .pricingTable-header{background:#104cba}
+.pricingTable10 .pricingTable-header:after,.pricingTable10 .pricingTable-header:before{content:"";width:16px;height:16px;border-radius:50%;border:1px solid #d9d9d8;position:absolute;bottom:12px}
+.pricingTable10 .pricingTable-header:before{left:40px}
+.pricingTable10 .pricingTable-header:after{right:40px}
+.pricingTable10 .heading{font-size:20px;color:#fff;text-transform:uppercase;letter-spacing:2px;margin-top:0}
+.pricingTable10 .price-value{display:inline-block;position:relative;font-size:55px;font-weight:700;color:#09b1c5;transition:all .3s ease 0s}
+.pricingTable10:hover .price-value{color:#fff}
+.pricingTable10 .currency{font-size:30px;font-weight:700;position:absolute;top:6px;left:-19px}
+.pricingTable10 .month{font-size:16px;color:#fff;position:absolute;/*text-transform:uppercase*/;bottom: -38px;
+    right: -8px;}
+.pricingTable10 .pricing-content{padding-top:50px;background:#fff;position:relative}
+.pricingTable10 .pricing-content:after,.pricingTable10 .pricing-content:before{content:"";width:16px;height:16px;border-radius:50%;border:1px solid #7c7c7c;position:absolute;top:12px}
+.pricingTable10 .pricing-content:before{left:40px}
+.pricingTable10 .pricing-content:after{right:40px}
+.pricingTable10 .pricing-content ul{padding:0 20px;margin:0;list-style:none}
+.pricingTable10 .pricing-content ul:after,.pricingTable10 .pricing-content ul:before{content:"";width:8px;height:46px;border-radius:3px;background:linear-gradient(to bottom,#818282 50%,#727373 50%);position:absolute;top:-22px;z-index:1;box-shadow:0 0 5px #707070;transition:all .3s ease 0s}
+.pricingTable10:hover .pricing-content ul:after,.pricingTable10:hover .pricing-content ul:before{background:linear-gradient(to bottom,#40c4db 50%,#34bacc 50%)}
+.pricingTable10 .pricing-content ul:before{left:44px}
+.pricingTable10 .pricing-content ul:after{right:44px}
+.pricingTable10 .pricing-content ul li{font-size:15px;font-weight:400;color:#777473;padding:5px 0;border-bottom:1px solid #d9d9d8}
+.pricingTable10 .pricing-content ul li:last-child{border-bottom:none}
+.pricingTable10 .read{border-radius: 10px; display:inline-block;font-size:16px;color:#fff;text-transform:uppercase;background:#d9d9d8;padding:8px 25px;margin:30px 0;transition:all .3s ease 0s}
+.pricingTable10 .read:hover{text-decoration:none}
+.pricingTable10:hover .read{background:#104cba}
+@media screen and (max-width:990px){.pricingTable10{margin-bottom:25px}
 }
 
-.t-m ul li {
-  padding: 5px;
-  margin-left: 10px;
+/*1st table ends*/
+
+
+
+/*2nd table*/
+
+
+.card-pricing.popular {
+    z-index: 1;
+    border: 3px solid #007bff;
 }
+.card-pricing .list-unstyled li {
+    padding: .5rem 0;
+    color: #6c757d;
+}
+
+
+
+
+
+
+
+
+
+
+/*2nd table end*/
+
+
+
+/*3rd table*/
+
+.demo
+{
+  padding: 50px 0;
+}
+.heading-title
+{
+  margin-bottom: 50px;
+}
+.pricingTable {
+    border: 1px solid #dbdbdb;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+    margin: 0 -15px;
+    text-align: center;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.pricingTable:hover{
+    border: 2px solid #e46367;
+    margin-top: -30px;
+}
+
+.pricingTable .pricingTable-header{
+    padding: 30px 10px;
+}
+
+.pricingTable .heading{
+    display: block;
+    color: #000;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size:21px;
+}
+
+.pricingTable .pricing-plans {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #d0d0d0;
+    color: #000;
+    font-weight: 900;
+}
+
+.pricingTable .price-value{
+    color: #474747;
+    display: block;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 35px;
+    padding: 0 10px;
+}
+
+.pricingTable .price-value span{
+    font-size: 50px;
+}
+
+.pricingTable .subtitle{
+    color: #82919f;
+    display: block;
+    font-size: 15px;
+    margin-top: 15px;
+    font-weight: 100;
+}
+
+.pricingTable .pricingContent ul{
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.pricingTable .pricingContent ul li{
+    padding: 20px 0;
+}
+
+.pricingTable .pricingContent ul li:nth-child(odd) {
+    background-color: #fff;
+}
+
+.pricingTable .pricingContent ul li:last-child{
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.pricingTable .pricingTable-sign-up{
+    padding: 25px 0;
+}
+
+.pricingTable .btn-block{
+    width: 50%;
+    margin: 0 auto;
+    background: #e46367;
+    border:1px solid transparent;
+    padding: 10px 5px;
+    color:#fff;
+    text-transform: capitalize;
+    border-radius: 5px;
+    transition:0.3s ease;
+}
+
+.pricingTable .btn-block:after{
+    content: "\f090";
+    font-family: 'FontAwesome';
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.pricingTable:hover .btn-block{
+    background:#fff;
+    color: #e46367;
+    border:1px solid #e46367;
+}
+
+@media screen and (max-width:990px){
+    .pricingTable{
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width:767px){
+    .pricingTable{
+       margin: 0 0 30px 0;
+    }
+}@charset "utf-8";
+/* CSS Document */
+
+
+
+
+/*end 3rd table*/
+
+
+
+
+
+
 
 .pointer {
   cursor: pointer;
@@ -7758,7 +7940,12 @@ color: white!important
   transform: scale(1.1);
   transition: 0.3s;
 }
-
+.siz-p{
+  font-size: 18px
+}
+.h5-siz{
+  font-size: 20px
+}
 
 
 @media only screen and (max-width: 810px) {
@@ -7767,13 +7954,54 @@ color: white!important
   }
 }
 
+.in-nav li{
+  display: inline-block!important;
+}
 
 
+.y-ch{
+  color: #777473!important;
+  font-weight:500!important;
+}
+.y-ch span{font-size: initial;}
 
-
-
+.cus-card{
+  padding-left: 0px!important;
+  padding-right: 0px!important
+}
+.btn-br{
+  border: 1px solid #666666!important;
+}
+.pdlr{
+  padding-right: 5px!important;
+  padding-left: 5px!important
+}
+.mlr{
+  margin-left: 0px!important;
+  margin-right: 0px!important
+}
+.f-s{
+  font-size: 40px
+}
+.fnt{
+  font-size: 36px
+}
 
 .pointer {cursor: pointer;}
+
+.margine-top{
+  margin-top: 5%
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* DEMO-SPECIFIC STYLES */
@@ -7801,83 +8029,4 @@ color: white!important
   from, to { border-color: transparent }
   50% { border-color: orange }
 }
-
-
-
-
-
-
-
-/*globe*/
-
-
-#earth {
-  /* [1] Allow it to contain the absolutely positions pseudo-elements (later-on) */
-  position: relative;
-background-image: url("https://lh5.googleusercontent.com/-kkxEx-SkRaY/VBLF4BV2lZI/AAAAAAAAKao/FnKsv7402_c/s500/earthmap.jpg");
-
-  /* [2] Set-up the dimensions and spacing */
-  width: 400px;
-  height: 400px;
-  margin: 3em auto;
-  opacity: 0.4;
-
-  /* [3] Prepare the animation effects */
-  transition: transform 200ms linear;
-  animation: rotate 8s linear infinite; /* This is going to be defined in the next step */
-
-  /* [4] Tweak the appearance, and give it a nice background i.e. the world map */
-  color: #000;
-  border-radius: 50%;
-  background: url('https://cdn.pixabay.com/photo/2012/02/22/19/28/africa-15428_960_720.jpg') 0 0 repeat / 630px;
-  box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
-
-  /* [5] Position things in a 3d space */
-  transform-style: preserve-3d;
-}
-
-#earth:after {
-  /* [1] Break the flow to show this as an overlay */
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  /* [2] Make it take all the space available in the box (ahem... globe!) */
-  width: 100%;
-  height: 100%;
-
-  /* [3] Make sure this has no generated content, as we want this just for fancy purposes */
-  content: '';
-
-  /* [4] Give it some shape and shadow */
-  border-radius: 50%;
-  box-shadow: -80px 15px 80px 10px rgba(0,0,0,.9) inset;
-}
-
-#earth:before {
-  /* [1] Again, break the flow to show this as an overlay */
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  /* [2] Again, give it all the available space */
-  width: 100%;
-  height: 100%;
-
-  /* [3] Duh. */
-  content: '';
-
-  /* [4] Add some shape and overlay effect to it */
-  opacity: .2;
-  border-radius: 50%;
-  background: radial-gradient(circle at 100px 100px, #fff, #000);
-}
-
-
-@keyframes rotate {
-  0% {background-position: 0 0;}
-  100% {background-position: 630px 0;}
-}
-
-
 
