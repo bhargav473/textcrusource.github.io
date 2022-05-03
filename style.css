@@ -8010,3 +8010,121 @@ color: white!important
   border-left: 3px solid #ed1f24;
   padding: 20px;
 }
+
+         .fab-button {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.795) url('./assets//up-arrow.svg') no-repeat center center;
+            filter: invert(100%);
+            -webkit-filter: invert(100%);
+            border-radius: 100%;
+            position: fixed;
+            z-index: 100;
+            bottom: 15px;
+            right: 15px;
+            cursor: pointer;
+         }
+         .fab-button.hide {
+            display: none;
+         }
+         .logo-scrolled {
+            display: absolute;
+         }
+         .globe {
+            background-color: black;
+            display: flex;
+            position: absolute;
+            width: 100%;max-width: 100%;
+            justify-content: end;
+         }
+
+
+.text {
+width: 800px;
+height: 100px;
+
+perspective: 1000px;
+perspective-origin: 50% -200px;
+}
+.text h1 {
+text-align: center;
+text-transform: uppercase;
+font-size: 4em;
+letter-spacing: 0.1em;
+color: #EEE;
+animation: rotate 2s ease-in-out alternate infinite;
+}
+.text h1:before {
+content: attr(data-shadow);
+color: transparent;
+text-shadow: 0 0 15px #111;
+position: absolute;
+z-index: -1;
+margin: -0.1em 0 0 0;
+animation: skew 2s ease-in-out alternate infinite;
+transform-origin: bottom;
+}
+@keyframes rotate {
+from {
+    transform: rotateY(-10deg);
+    text-shadow:  1px -1px #CCC,
+                                2px -1px #BBB,
+                                3px -2px #AAA,
+                                4px -2px #999,
+                                5px -3px #888,
+                                6px -3px #777;
+}
+to {
+    transform: rotateY(10deg);
+    text-shadow:  -1px -1px #CCC,
+                                -2px -1px #BBB,
+                                -3px -2px #AAA,
+                                -4px -2px #999,
+                                -5px -3px #888,
+                                -6px -3px #777;
+}
+}
+@keyframes skew {
+from {
+    transform: scaleY(0.3) skewX(-15deg);
+}
+to {
+    transform: scaleY(0.3) skewX(-20deg);
+}
+}
+
+    
+
+
+.stone:hover {
+    transform: rotate(1deg);
+}
+
+.content {
+    margin: auto;
+}
+.content h1 {
+    font-size: 2.75em;
+    letter-spacing: 2px;
+    background-color: #94909a;
+    color: transparent;
+    -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+    text-transform: uppercase;
+    transform: rotate(-3deg);
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+.carved-text {
+    text-shadow: 1px 1px 1px hsla(0,0%,255%,0.5);
+}
+.relief-text {
+    text-shadow: -1px -1px 1px hsla(0,0%,255%,0.6); 
+    transform: translate(-1px, -1px);
+}
+
+
+
+
+
