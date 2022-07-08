@@ -8123,6 +8123,10 @@ to {
     text-shadow: -1px -1px 1px hsla(0,0%,255%,0.6); 
     transform: translate(-1px, -1px);
 }
+.bt-cl{
+  padding: 20px 0;
+  border-radius: 12px;
+}
 
 
 
