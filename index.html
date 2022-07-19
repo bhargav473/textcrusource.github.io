@@ -921,7 +921,7 @@ and onboard resources while monitoring performance of all stakeholders.
       <h2>Need Help?</h2>
       <p>Reach out to the world’s most reliable IT services.</p>
       </div>
-      <form  method="POST"   onsubmit="" >
+      <form class="help-form" onsubmit="return sendMail('.help-form')">
       <div class="row">
       <div class="col-lg-6">
       <div class="form-group">
@@ -939,7 +939,7 @@ and onboard resources while monitoring performance of all stakeholders.
       <div class="row">
       <div class="col-lg-6">
       <div class="form-group">
-      <input class="form-control" id="Company" name="Company" placeholder="Company" type="text">
+      <input class="form-control" id="org" name="Company" placeholder="Company" type="text">
       <span class="alert-error"></span>
       </div>
       </div>
@@ -950,6 +950,14 @@ and onboard resources while monitoring performance of all stakeholders.
       </div>
       </div>
       </div>
+
+      <div class="col-lg-3 col-md-3 d-flex padding-20-row-" >
+         <div class="input-style mb-20 align-items-start justify-content-flex-start" >
+            <input name="checkbox" id="checkbox" placeholder="I agree for all" type="checkbox" />
+            I agree to everything
+         </div>
+      </div>
+
       <div class="row">
       <div class="col-lg-12">
       <div class="form-group comments">
@@ -969,7 +977,7 @@ and onboard resources while monitoring performance of all stakeholders.
       </div>
       <div class="row">
       <div class="col-lg-12">
-      <button  class="btn" type="submit" name="submit" id="submit submit2" disabled />
+      <button  class="btn" type="submit" name="submit" />
       Get a free consultation
       </button>
       </div>
@@ -992,70 +1000,72 @@ and onboard resources while monitoring performance of all stakeholders.
       </div>
       </div>
       </div>
-      <script type="text/javascript">
-   $('#check').click(function() {
-  if ($(this).is(':checked')) {
-    $('#submit2').removeAttr('disabled');
-  } else {
-    $('#submit2').attr('disabled', 'disabled');
-  }
-});
-</script>
 
 
 <script>
+   // $('.contact-form').on('submit', function () {
+   //    sendMail();
+   // });
 
- function callAPIgetResponse(url, config) {
-      console.log(url);
-      return fetch(url, config)
+   function sendMail(formId) {
+      console.log('calledd')
+      if(!document.querySelector(formId+' #checkbox').checked)
+      {
+         alert('Please agree to terms and conditions');
+         return false;
+      }
+      
+         const tokenURL = "http://3.110.162.90:8080/Token";
+         const tokenURLConfig = {
+            method : "POST"
+         };
+         // const r = callAPIgetResponse(tokenURL, tokenURLConfig)
+         // console.log(r.Token);
+         fetch(tokenURL, tokenURLConfig)
          .then(function(response) {
             if (response.ok) {
                return response.json();
             } else {
                throw new Error("Could not reach the API: " + response.statusText);
             }
-         }).catch(function(error) {
+         })
+         .then(r => {
+            const token = r.Token
+            console.log(r.Token);
+            if(r.Token)
+            {
+               var headers = new Headers();
+
+               headers.append('Accept', 'application/json'); // This one is enough for GET requests
+               headers.append('Content-Type', 'application/json'); // This one sends body
+               headers.append('Authorization',  'Bearer '+r.Token); // Set bearer
+
+               fetch('http://3.110.162.90:8080/SendMail', {
+               method: 'POST',
+               headers: headers,
+               body: JSON.stringify({
+                     organisation_name: document.querySelector(formId+" #org").value,
+                     name : document.querySelector(formId+" #name").value,
+                     mobile_number : document.querySelector(formId+" #phone").value,
+                     email : document.querySelector(formId+" #email").value,
+                     description : document.querySelector(formId+" #comments").value
+                  })
+               }).then(res => res.json())
+               .then(res => {
+                  alert(' Your message was sent successfully ');
+                  window.location.reload();
+                  console.log(res)
+               })
+               .catch(e => console.log(e));
+            }
+         })
+         .catch(function(error) {
             console.log(error);
             return false;
          })
-   }
 
-
-   function SendMailApi(event) {
-        
-
-         const tokenURL = "http://3.110.162.90:8080/Token";
-         const tokenURLConfig = {
-            method : "POST"
-         };
-         const r = callAPIgetResponse(tokenURL, tokenURLConfig)
-         console.log(r.Token);
-
-         if(r.Token)
-         {
-            // send email
-            const emailURL = "";
-            const emailURLConfig = {
-             headers : {
-                  'Authorization': 'Bearer '+r.Token, 
-                  'Content-Type': 'text/plain'
-               },
-               body : {
-                    'organisation_name': 'org name,'
-                        'name' : 'bhargav',
-                  'email' : document.querySelector(".contact-form #email").value,
-              
-                  'mobile_number' : '9333303333',
-                
-                  'description' : 'message'
-               },
-               method : "POST",
-               mode : "cors"
-            };
-            const r2 = await callAPIgetResponse(emailURL, emailURLConfig)
-            console.log(r2);
-         }
-            
+         
+      return false;       
     }
 </script>
 
@@ -1179,14 +1189,14 @@ and onboard resources while monitoring performance of all stakeholders.
                   <div class="modal-body">
                      <div class="content">
                         <div class="heading">
-                           <h2>Need Help?</h2>
+                           <h3>Need Help?</h3>
                            <p>Reach out to the world’s most reliable IT services.</p>
                         </div>
-                        <form onsubmit="SendMailApi()"  class="contact-form">
+                        <form class="contact-form" onsubmit="return sendMail('.contact-form')">
                            <div class="row">
                               <div class="col-lg-6">
                                  <div class="form-group">
-                                    <input class="form-control" id="name" name="name" placeholder="Organisation Name
+                                    <input class="form-control" id="org" name="name" placeholder="Organisation Name
                                        " type="text">
                                     <span class="alert-error"></span>
                                  </div>
@@ -1202,7 +1212,7 @@ and onboard resources while monitoring performance of all stakeholders.
                            <div class="row">
                               <div class="col-lg-6">
                                  <div class="form-group">
-                                    <input class="form-control" id="email" name="email" placeholder="Email" type="email">
+                                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" value="asda@gmail.com">
                                     <span class="alert-error"></span>
                                  </div>
                               </div>
@@ -1221,11 +1231,18 @@ and onboard resources while monitoring performance of all stakeholders.
                               </div>
                            </div>
                           <div>
+
+                     
+                              <div class=" mb-3" >
+                                          <input style="width: 20px!important; min-height: 0px!important;height: 20px!important;margin-right: ;4px: ;" name="checkbox" id="checkbox" placeholder="I agree for all" type="checkbox" />
+                                        <span>  I agree to Terms & Conditions</span>
+
+                                       </div>
                 <!-- <div class="g-recaptcha" data-sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"></div> -->
                            <div class="row">
                               <div class="col-lg-12">
                                  <button type="submit"  value="Submit"  class="btn btn-primary" name="submit" >
-                                 Get a free consultationbdfh
+                                 Get a free consultation
                                  </button>
                               </div>
                            </div>
@@ -1443,6 +1460,7 @@ and onboard resources while monitoring performance of all stakeholders.
           
           
         }
+
       </script>
       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-228124213-1"></script>
@@ -1464,6 +1482,20 @@ and onboard resources while monitoring performance of all stakeholders.
       <script src="assets/js/bootsnav.js"></script>
       <script src="assets/js/main.js"></script>
       <script src="assets/js/maintable.js"></script>
+
+      <script >
+         $(document).ready(function() {
+
+        $('#check').click(function() {
+         if ($(this).is(':checked')) {
+            $('#submit2').removeAttr('disabled');
+         } else {
+            $('#submit2').attr('disabled', 'disabled');
+         }
+         });
+         })
+
+      </script>
    </body>
 </html>
 
